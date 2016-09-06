@@ -3,7 +3,7 @@ openjdk-7-jre-headless:
 
 /usr/lib/java:
   file.symlink:
-    - target: /usr/lib/jvm/java-7-openjdk-amd64:
+    - target: /usr/lib/jvm/java-7-openjdk-amd64
 
 /usr/lib/java/bin/:
   file.directory:
