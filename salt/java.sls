@@ -12,6 +12,6 @@ openjdk-7-jre-headless:
     - mode: 755
     - makedirs: True
 
-/usr/lib/java/bin/java:
+/usr/bin/java:
   file.symlink:
-    - target: /usr/lib/jvm/java-7-openjdk-amd64/bin/java
+    - target: /usr/lib/jvm/java-7-openjdk-amd64

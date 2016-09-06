@@ -1,5 +1,6 @@
 curl -L https://bootstrap.saltstack.com -o bootstrap_salt.sh
 sudo sh bootstrap_salt.sh
+rm /usr/bin/java
 echo <<EOT >> /etc/salt/minion.d/grains.conf
 grains:
   roles:
