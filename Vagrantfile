@@ -32,9 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.hostname = "salt-master"
     config.vm.synced_folder "salt", "/srv/salt"
     config.vm.provision "shell", inline: "sudo chmod +x /srv/salt/script/provision-minion.sh && sudo /srv/salt/script/provision-minion.sh"
-    #config.vm.synced_folder "kafka", "/srv/salt/kafka"
-    #config.vm.synced_folder "vagrant/zookeeper/zookeeper", "/srv/salt/zookeeper"
-    #config.vm.synced_folder "vagrant/srv/pillar", "/srv/pillar"
+    config.vm.synced_folder "pillar", "/srv/pillar"
   end
 
 
