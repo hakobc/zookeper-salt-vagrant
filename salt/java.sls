@@ -1,9 +1,9 @@
 openjdk-7-jre-headless:
   pkg.installed
 
-/usr/lib/jvm/java-7-openjdk-amd64:
+/usr/lib/java:
   file.symlink:
-    - target: /usr/lib/java
+    - target: /usr/lib/jvm/java-7-openjdk-amd64:
 
 /usr/lib/java/bin/:
   file.directory:
@@ -12,6 +12,6 @@ openjdk-7-jre-headless:
     - mode: 755
     - makedirs: True
 
-/usr/lib/jvm/java-7-openjdk-amd64/bin/java:
+/usr/lib/java/bin/java:
   file.symlink:
-    - target: /usr/lib/java/bin/java
+    - target: /usr/lib/jvm/java-7-openjdk-amd64/bin/java
